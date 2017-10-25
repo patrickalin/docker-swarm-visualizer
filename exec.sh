@@ -1,1 +1,1 @@
-docker stack deploy --compose-file docker-compose.yml documentation
+docker stack deploy --compose-file docker-compose.yml visualizer
