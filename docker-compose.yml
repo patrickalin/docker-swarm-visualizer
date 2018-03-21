@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   visualizer:
-    image: dockersamples/visualizer:latest
+    image: registry.services.alin.be/dockersamples/visualizer:latest
     privileged: true
     volumes:
      - /var/run/docker.sock:/var/run/docker.sock
@@ -19,9 +19,6 @@ services:
         - traefik.frontend.rule=Host:visualizer.services.alin.be
         - traefik.frontend.entryPoints=http,https
         - traefik.backend.loadbalancer.method=wrr
-#        - traefik.backend=visualize
-#    ports:
-#     - "7098:8080"
 
 networks:
   default:
